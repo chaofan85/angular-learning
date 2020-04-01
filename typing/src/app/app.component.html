@@ -1,6 +1,22 @@
-<div>
-  <h3>Typing Game</h3>
-  <p>aasd f fkasjdhf kjd faksdhf lahdf</p>
-  <input />
-  <p>You win!</p>
+<div class="container">
+  <div class="columns is-centered">
+    <div class="box column is-one-third">
+      <h1 class="title has-text-centered">Typing Game</h1>
+      <p class="has-text-centered">
+        <span
+          [class]="compare(char, typedText[i])"
+          *ngFor="let char of randomtext.split(''); let i = index"
+          >{{ char }}</span
+        >
+      </p>
+
+      <div class="field">
+        <input class="input" (input)="inputChange($event.target.value)" />
+      </div>
+
+      <div class="box has-text-centered" *ngIf="showSuccessMsg">
+        <h1 class="title">You win!</h1>
+      </div>
+    </div>
+  </div>
 </div>
