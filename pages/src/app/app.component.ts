@@ -8,6 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   currentPage = 0;
 
+  checkPageIndex(i: number) {
+    return Math.abs(this.currentPage - i) < 5;
+  }
+
   images = [
     {
       title: 'At the Beach',

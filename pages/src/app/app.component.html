@@ -7,7 +7,7 @@
       <li
         class="page-item"
         [ngClass]="{ active: i === currentPage }"
-        *ngIf="i < 5"
+        *ngIf="checkPageIndex(i)"
       >
         <a (click)="currentPage = i" class="page-link">{{ i + 1 }}</a>
       </li>
@@ -25,3 +25,12 @@
   <h4>{{ images[currentPage].title }}</h4>
   <img [src]="images[currentPage].url" />
 </div>
+
+<!-- <div [ngSwitch]="currentPage">
+  <div *ngSwitchCase="0">
+    Current Page is zero
+  </div>
+  <div *ngSwitchDefault>
+    Default
+  </div>
+</div> -->
