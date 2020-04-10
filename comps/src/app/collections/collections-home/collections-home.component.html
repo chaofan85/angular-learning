@@ -4,3 +4,15 @@
   [data]="data"
   [headers]="headers"
 ></app-table>
+
+<app-divider>Tab Menu</app-divider>
+<div class="ui grid">
+  <div class="four wide column">
+    <div class="ui vertical fluid tabular menu"></div>
+  </div>
+  <div class="twelve wide stretched column">
+    <div class="ui segment">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
