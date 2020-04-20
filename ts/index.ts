@@ -27,3 +27,32 @@ const printPost = (postToPrint: Post) => {
 };
 
 printPost(post);
+
+// classes
+
+// class Car {
+//   constructor(public color: string, private year: number) {}
+
+//   drive() {
+//     console.log(this.year);
+//     console.log("Vroom");
+//   }
+// }
+
+// const myCar = new Car("red", 2000);
+// myCar.drive();
+
+// decorator
+
+// const Component = (target: any) => {
+//   console.log(target);
+// };
+
+// @Component
+// class Car {}
+
+// module
+
+import { Car } from "./Car";
+
+const myCar = new Car();
