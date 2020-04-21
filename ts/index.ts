@@ -53,6 +53,47 @@ printPost(post);
 
 // module
 
-import { Car } from "./Car";
+// import { Car } from "./Car";
+
+// const myCar = new Car();
+
+interface Driveable {
+  speed: number;
+  drive(): string;
+}
+
+class Car implements Driveable {
+  speed = 10;
+
+  drive() {
+    return `I am driving at ${this.speed}`;
+  }
+}
 
 const myCar = new Car();
+
+const startDriving = (vehicle: Driveable) => {
+  vehicle.drive();
+};
+
+startDriving(myCar);
+
+// Generics
+
+class ValueHolder<T> {
+  value: T;
+}
+
+// const numberHolder = new ValueHolder<number>();
+// numberHolder.value;
+
+const numberWrapper = (value: number): number[] => {
+  return [value];
+};
+
+const valueWrapper = <T>(value: T): T[] => {
+  return [value];
+};
+
+valueWrapper<number>(5);
+valueWrapper<boolean>(true);
