@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-photo-show',
@@ -7,6 +7,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class PhotoShowComponent implements OnInit {
   @Output() submitted = new EventEmitter();
+  @Input() imgUrl = '';
 
   constructor() {}
 

@@ -7,13 +7,15 @@ import { PhotoFetchService } from './photo-fetch.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  title = '';
+
   imgUrl = '';
 
   constructor(private photoFetch: PhotoFetchService) {}
 
   onSearch() {
-    this.photoFetch.fetchPhoto().subscribe((res) => {
-      console.log(res);
+    this.photoFetch.fetchPhoto().subscribe((url) => {
+      this.imgUrl = url;
     });
   }
 }
