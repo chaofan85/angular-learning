@@ -52,6 +52,8 @@ export class SignupComponent implements OnInit {
       error: (err) => {
         if (!err.status) {
           this.authForm.setErrors({ noConnection: true });
+        } else {
+          this.authForm.setErrors({ unknownError: true });
         }
       },
     });
