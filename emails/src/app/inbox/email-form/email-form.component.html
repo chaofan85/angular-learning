@@ -11,12 +11,12 @@
   ></app-input>
   <app-input
     [control]="emailForm.get('subject')"
-    inputType="email"
+    inputType="text"
     label="Subject"
   ></app-input>
   <app-input
+    controlType="textarea"
     [control]="emailForm.get('text')"
-    inputType="email"
     label="Content"
   ></app-input>
 
